@@ -993,11 +993,117 @@ internal static int NumOfCraftCurrency()
 {
 	return 0;
 }
+Num of currency (free shopping?) 2:
+// GameCurrencyUpdater
+// Token: 0x06004B86 RID: 19334 RVA: 0x000157C8 File Offset: 0x000139C8
+[Token(Token = "0x60039FB")]
+[Address(RVA = "0x143A490", Offset = "0x143A490", VA = "0x143A490", Slot = "6")]
+protected override int NumOfCurrency()
+{
+	return 0;
+}
+Gem hack:
+// PGCompany.GemsCurrencyUpdater
+// Token: 0x0600F0CA RID: 61642 RVA: 0x00046F80 File Offset: 0x00045180
+[Token(Token = "0x600BCEF")]
+[Address(RVA = "0x1652F28", Offset = "0x1652F28", VA = "0x1652F28", Slot = "6")]
+protected override int NumOfCurrency()
+{
+	return 0;
+}
+Coupons hack:
+// PGCompany.CouponsCurrencyUpdater
+// Token: 0x0600F0BC RID: 61628 RVA: 0x00046F38 File Offset: 0x00045138
+[Token(Token = "0x600BCE7")]
+[Address(RVA = "0x24A6610", Offset = "0x24A6610", VA = "0x24A6610", Slot = "6")]
+protected override int NumOfCurrency()
+{
+	return 0;
+}
+Coins price (free shopping?):
+// Rilisoft.GameCurrencyData
+// Token: 0x170022C8 RID: 8904
+// (get) Token: 0x0600E42D RID: 58413 RVA: 0x0003E6B8 File Offset: 0x0003C8B8
+[Token(Token = "0x170022C8")]
+[JsonIgnore]
+[IgnoreMember]
+internal int CoinsPrice
+{
+	[Token(Token = "0x600E42D")]
+	[Address(RVA = "0x3F9EA84", Offset = "0x3F9EA84", VA = "0x3F9EA84")]
+	get
+	{
+		return 0;
+	}
+}
+Currency hack (free shopping?) 4:
+// Rilisoft.GameCurrencyData
+// Token: 0x170022C5 RID: 8901
+// (get) Token: 0x0600E42A RID: 58410 RVA: 0x00002050 File Offset: 0x00000250
+[Token(Token = "0x170022C5")]
+[JsonIgnore]
+[IgnoreMember]
+internal 丂不丝丞丏丘丒不且 Currency
+{
+	[Token(Token = "0x600E42A")]
+	[Address(RVA = "0x3F9E9AC", Offset = "0x3F9E9AC", VA = "0x3F9E9AC")]
+	get
+	{
+		return null;
+	}
+}
+Currency hack (free shopping?) 3:
+// CurrencyUpdater
+// Token: 0x06000CC9 RID: 3273
+[Token(Token = "0x60009B9")]
+protected abstract int NumOfCurrency(); 
 Num of currency (free shopping?):
-// BankController
-// Token: 0x06004F69 RID: 20329 RVA: 0x00016B48 File Offset: 0x00014D48
-[Token(Token = "0x6003CEB")]
-[Address(RVA = "0x1979E48", Offset = "0x1979E48", VA = "0x1979E48")]
+	//BankController
+	// Token: 0x06004F6A RID: 20330 RVA: 0x00016B60 File Offset: 0x00014D60
+	[Token(Token = "0x6003CEC")]
+	[Address(RVA = "0x1979EE8", Offset = "0x1979EE8", VA = "0x1979EE8")]
+	internal static int NumOfCurrency(string currency)
+	{
+		return 0;
+	}
+Get time for bonus (powerup / drop) (infinite powerups / drops?):
+// Token: 0x06000612 RID: 1554 RVA: 0x00003ED0 File Offset: 0x000020D0
+	[Token(Token = "0x6000514")]
+	[Address(RVA = "0x1C65E18", Offset = "0x1C65E18", VA = "0x1C65E18")]
+	private double GetTimeForBonus(float delayTime = 0f)
+	{
+		return 0.0;
+	}
+Can spawn gem drop / bonus (gem hack?):
+// Token: 0x06000613 RID: 1555 RVA: 0x00003EE8 File Offset: 0x000020E8
+	[Token(Token = "0x6000515")]
+	[Address(RVA = "0x1C6581C", Offset = "0x1C6581C", VA = "0x1C6581C")]
+	private bool CanSpawnGemBonus()
+	{
+		return default(bool);
+	}
+Index bonus (mess up bonuses / drops / powerups and make them op by settings to 1?):
+/ Token: 0x06000614 RID: 1556 RVA: 0x00003F00 File Offset: 0x00002100
+	[Token(Token = "0x6000516")]
+	[Address(RVA = "0x1C65B90", Offset = "0x1C65B90", VA = "0x1C65B90")]
+	private int IndexBonus()
+	{
+		return 0;
+	}
+Skin maker price (free skin maker?):
+	// RVA: 0x14B8810 Offset: 0x14B8810 VA: 0x14B8810
+	internal static int get_skinsMakerPrice() { }
+Earned Coins (Coin Hack?):
+	// RVA: 0x14B80F4 Offset: 0x14B80F4 VA: 0x14B80F4
+	internal static string get_EarnedCoins() { }
+Possibility to drop bonus / powerup / drop on fire maybe but probably not:
+// Token: 0x060005FB RID: 1531 RVA: 0x00003EB8 File Offset: 0x000020B8
+	[Token(Token = "0x60004FD")]
+	[Address(RVA = "0x1C61D70", Offset = "0x1C61D70", VA = "0x1C61D70", Slot = "4")]
+	public bool OnEventFired(byte index, object[] args)
+	{
+		return default(bool);
+	} 
 internal static int NumOfCurrency(ItemPrice itemPrice)
 {
 	return 0;
@@ -3760,7 +3866,7 @@ public bool IsEnemyTo(Player_move_c player)
 {
 	return default(bool);
 }
-Godmode working:
+Godmode I think:
 // PlayerDamageable
 // Token: 0x060032BB RID: 12987 RVA: 0x0000F258 File Offset: 0x0000D458
 [Token(Token = "0x6002775")]
@@ -5428,6 +5534,105 @@ internal int AmmoInClip
 		return 0;
 	}
 }
+Armor percent:
+// ItemRecord
+// Token: 0x1700197A RID: 6522
+// (get) Token: 0x0600AF6F RID: 44911 RVA: 0x0002F4A8 File Offset: 0x0002D6A8
+[Token(Token = "0x1700197A")]
+internal int ArmorPercent
+{
+	[Token(Token = "0x600AF6F")]
+	[Address(RVA = "0x4651590", Offset = "0x4651590", VA = "0x4651590")]
+	get
+	{
+		return 0;
+	}
+}
+Available ads or can watch ad for coupons:
+// ItemRecord
+// Token: 0x17001981 RID: 6529
+// (get) Token: 0x0600AF77 RID: 44919 RVA: 0x0002F520 File Offset: 0x0002D720
+[Token(Token = "0x17001981")]
+internal bool AvailableAdsAlmanach
+{
+	[Token(Token = "0x600AF77")]
+	[Address(RVA = "0x46516AC", Offset = "0x46516AC", VA = "0x46516AC")]
+	get
+	{
+		return default(bool);
+	}
+}
+Bot damage:
+// ItemRecord
+// Token: 0x17001959 RID: 6489
+// (get) Token: 0x0600AF4B RID: 44875 RVA: 0x0002F208 File Offset: 0x0002D408
+[Token(Token = "0x17001959")]
+internal float DPSForBot
+{
+	[Token(Token = "0x600AF4B")]
+	[Address(RVA = "0x465035C", Offset = "0x465035C", VA = "0x465035C")]
+	get
+	{
+		return 0f;
+	}
+}
+Lots of useful module functions:
+public static class PlayerModules // TypeDefIndex: 8812
+{
+	// Fields
+	private static int[] appliedResistsBuf; // 0x0
+
+	// Properties
+	internal static bool isAvailable { get; }
+
+	// Methods
+
+	// RVA: 0x16E1B68 Offset: 0x16E1B68 VA: 0x16E1B68
+	private static float GetModulesDPSForTarget(WeaponSounds weapon, IDamageable target, out int resistType) { }
+
+	// RVA: 0x16E2918 Offset: 0x16E2918 VA: 0x16E2918
+	internal static float GetWeaponDamageAndShowResist(WeaponSounds weapon, Transform target) { }
+
+	// RVA: 0x16E3230 Offset: 0x16E3230 VA: 0x16E3230
+	internal static float GetGadgetDamageAndShowResist(float gadgetDamage, Dictionary<int, float> gadgetModules, Transform target) { }
+
+	// RVA: 0x16E39DC Offset: 0x16E39DC VA: 0x16E39DC
+	private static float GetConvertedModuleModificator(ModuleData.ModuleType moduleType, float modificator) { }
+
+	// RVA: 0x16E3AD4 Offset: 0x16E3AD4 VA: 0x16E3AD4
+	internal static void UpdateMineWeaponModulesList() { }
+
+	// RVA: 0x16E3F94 Offset: 0x16E3F94 VA: 0x16E3F94
+	internal static void UpdateMineArmorModulesList() { }
+
+	// RVA: 0x16E439C Offset: 0x16E439C VA: 0x16E439C
+	internal static void UpdateModulesList(Dictionary<int, float> playerModules, int[] modulesTypes, float[] modulesModifires) { }
+
+	// RVA: 0x16E44E8 Offset: 0x16E44E8 VA: 0x16E44E8
+	internal static void GetModulesArrays(Dictionary<int, float> playerModules, out int[] modulesTypes, out float[] modulesModifires) { }
+
+	// RVA: 0x16E2E40 Offset: 0x16E2E40 VA: 0x16E2E40
+	internal static void ShowModuleResistParticles(Transform target, int resistType) { }
+
+	// RVA: 0x16E268C Offset: 0x16E268C VA: 0x16E268C
+	internal static bool get_isAvailable() { }
+
+	// RVA: 0x16E2900 Offset: 0x16E2900 VA: 0x16E2900
+	internal static bool IsDPSModule(int moduleType) { }
+
+	// RVA: 0x16E2914 Offset: 0x16E2914 VA: 0x16E2914
+	internal static int MobTypeToModule(MobModuleType mobType) { }
+
+	// RVA: 0x16E47A0 Offset: 0x16E47A0 VA: 0x16E47A0
+	internal static void SetModuleSprite(UISprite sprite, ModuleData.ModuleType moduleType) { }
+
+	// RVA: 0x16E4928 Offset: 0x16E4928 VA: 0x16E4928
+	private static void .cctor() { }
+}
+
+Is elemental module 2:
+// RVA: 0x16E2900 Offset: 0x16E2900 VA: 0x16E2900
+	internal static bool IsDPSModule(int moduleType) { }
 Ammo in clip without effects:
 // ItemRecord
 // Token: 0x17001262 RID: 4706
@@ -5772,6 +5977,20 @@ internal float RocketSpeed
 	get
 	{
 		return 0f;
+	}
+}
+Exploding bullets:
+// ItemRecord
+// Token: 0x1700195F RID: 6495
+// (get) Token: 0x0600AF51 RID: 44881 RVA: 0x0002F280 File Offset: 0x0002D480
+[Token(Token = "0x1700195F")]
+internal bool IsGrenadeWeapon
+{
+	[Token(Token = "0x600AF51")]
+	[Address(RVA = "0x46509D0", Offset = "0x46509D0", VA = "0x46509D0")]
+	get
+	{
+		return default(bool);
 	}
 }
 Speed modifier:
@@ -6278,6 +6497,48 @@ public virtual bool Available
 		return default(bool);
 	}
 }
+Free super chest:
+// Rilisoft.GameEventChest
+// Token: 0x17001D03 RID: 7427
+// (get) Token: 0x0600B051 RID: 45137 RVA: 0x000303C0 File Offset: 0x0002E5C0
+[Token(Token = "0x170015F4")]
+public int ToOpenSpins
+{
+	[Token(Token = "0x6008523")]
+	[Address(RVA = "0x20F6F30", Offset = "0x20F6F30", VA = "0x20F6F30")]
+	get
+	{
+		return 0;
+	}
+}
+Free super chest 3 (not bannable I don't think but maybe):
+// Rilisoft.GameEventProgressBar
+// Token: 0x17001C4E RID: 7246
+// (get) Token: 0x0600AC5A RID: 44122 RVA: 0x0002F5C8 File Offset: 0x0002D7C8
+[Token(Token = "0x17001576")]
+private int AccumulatedSpins
+{
+	[Token(Token = "0x600826F")]
+	[Address(RVA = "0x1F5587C", Offset = "0x1F5587C", VA = "0x1F5587C")]
+	get
+	{
+		return 0;
+	}
+}
+
+Free super chest 2:
+// Token: 0x17001C4D RID: 7245
+		// (get) Token: 0x0600AC59 RID: 44121 RVA: 0x0002F5B0 File Offset: 0x0002D7B0
+		[Token(Token = "0x17001575")]
+		private int ToOpenSpins
+		{
+			[Token(Token = "0x600826E")]
+			[Address(RVA = "0x1F55800", Offset = "0x1F55800", VA = "0x1F55800")]
+			get
+			{
+				return 0;
+			}
+		}
 Chest bet available (in last hour of lotto u cant bet):
 // Rilisoft.GameEventChest
 // Token: 0x17001D0B RID: 7435
@@ -6619,7 +6880,28 @@ internal int CountKills
 	{
 	}
 }
-Armor:
+Visually use left hand:
+// GlobalGameController
+// Token: 0x17000CF6 RID: 3318
+// (get) Token: 0x06004E47 RID: 20039 RVA: 0x00016458 File Offset: 0x00014658
+// (set) Token: 0x06004E48 RID: 20040 RVA: 0x00002053 File Offset: 0x00000253
+[Token(Token = "0x17000909")]
+internal static bool LeftHanded
+{
+	[Token(Token = "0x6003BF0")]
+	[Address(RVA = "0x279B310", Offset = "0x279B310", VA = "0x279B310")]
+	get
+	{
+		return default(bool);
+	}
+	[Token(Token = "0x6003BF1")]
+	[Address(RVA = "0x279B474", Offset = "0x279B474", VA = "0x279B474")]
+	set
+	{
+	}
+}
+
+Armor points:
 // GlobalGameController
 // Token: 0x17000CF3 RID: 3315
 // (get) Token: 0x06004E41 RID: 20033 RVA: 0x00016410 File Offset: 0x00014610
@@ -6741,7 +7023,7 @@ internal static int EnemiesToKill
 	{
 	}
 }
-Auto regen armor:
+Auto regen armor (like obb mod?):
 // GlobalGameController
 // Token: 0x17000CF4 RID: 3316
 // (get) Token: 0x06004E43 RID: 20035 RVA: 0x00016428 File Offset: 0x00014628
@@ -8040,7 +8322,7 @@ public bool IsDefault
 		return default(bool);
 	}
 }
-Num of parts currency:
+Num of parts currency (free craft):
 // PGCompany.CraftCurrencyUpdater
 // Token: 0x0600EE3A RID: 60986 RVA: 0x00046740 File Offset: 0x00044940
 [Token(Token = "0x600BAD1")]
