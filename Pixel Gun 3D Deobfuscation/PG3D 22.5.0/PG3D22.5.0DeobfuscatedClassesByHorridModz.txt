@@ -1,3 +1,9 @@
+PG3D 22.5.0 Deobfuscated Class Names
+Deobfuscated by HorridModz using my WIP python program
+Not all of these may be accurate, but it is more accurate than Beebyte Deobfuscator
+
+
+
 Locale=['Locale']
 SR=[]
 Registry=['Registry']
